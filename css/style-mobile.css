@@ -33,18 +33,28 @@ header{
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-left: 16px ;
+  margin-left: 28px;
+}
+
+.titulo h1 {
+  padding-left: 8px;
+}
+
+.titulo .titulo-img-lapis{
+  background-color: transparent;
 }
 
 .header-options {
   margin: 1em 0em 1em 0em;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
 }
 
 .header-adicionar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--btn-add-color);
   width: 44px;
   height: 44px;
@@ -52,15 +62,26 @@ header{
 }
 
 .header-filtrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--btn-filtro-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  
 }
 
 .header-options input{
-  width: 180px;
+  width: 182px;
   height: 44px;
   border-radius: 5px 16px 5px 16px;
+  padding-left: 28px;
 }
+
+.header-options #imgBuscar{
+  background-image: url("../img/icons/buscar.png");
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 4% 50%;
+}
+
