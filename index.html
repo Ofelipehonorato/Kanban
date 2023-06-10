@@ -16,17 +16,125 @@
         <button class="titulo-img-lapis"><img src="./img/icons/pencil.png" alt="Editar" width="16px"></button>
         <h1 >Meu Kanban</h1>
       </div>
-
         <div class="header-options">
-        <button class="header-adicionar"><img src="./img/icons/add.png" alt="Adicionar" width="16px"></button>
-        <button class="header-filtrar"><img src="./img/icons/filtrar.png" alt="Adicionar" width="16px"></button>
-        <div class="header-options-filtrar">
-          <!-- <img src="./img/icons/buscar.png" alt="Buscar" width="16px" /> -->
-          <input type="text" id="imgBuscar" placeholder="Busque por cards, assuntos">
-        </div>
-      
+          <button class="header-adicionar">
+            <img src="./img/icons/add.png" alt="Adicionar" width="16px">
+          </button>
+
+          <button class="header-filtrar">
+            <img src="./img/icons/filtrar.png"   alt="Adicionar" width="16px">
+          </button>
+
+          <div class="header-options-filtrar">
+            <input type="text" id="imgBuscar" placeholder="Busque por cards, assuntos">
+          </div>
     </div>
   </header>
+  <main class="main-cards-layout">
+<!-- ********************** CARD DA COLUNA A FAZER ********************** -->
+    <div class="main-cards-afazer">
+      <p class="afazer-titulo">Á Fazer</p>
+
+      <div class="main-cards-afazer-layout">
+          <div class="main-cards-afazer-text">
+            <h1>Título</h1>
+            <p>Prazo xx/xx/xxxx</p>
+            <button class="btn-afazer">
+              Editar
+            </button>
+          </div>
+
+          <div class="main-cards-afazer-btn">
+            <button class="btn-afazer">
+              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
+            </button>
+            <button class="btn-afazer">
+              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
+            </button>
+          </div>
+        </div>
+        <div class="cards-afazer-footer"></div>
+      </div>
+
+<!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
+    <div class="main-cards-execucao">
+  <p class="execucao-titulo">Execução</p>
+
+  <div class="main-cards-execucao-layout">
+      <div class="main-cards-execucao-text">
+        <h1>Título</h1>
+        <p>Prazo xx/xx/xxxx</p>
+        <button class="btn-execucao">
+          Editar
+        </button>
+      </div>
+
+      <div class="main-cards-execucao-btn">
+        <button class="btn-execucao">
+          <img src="./img/icons/close-execu.png" width="16px" alt="Fechar">
+        </button class="btn-execucao">
+        <button class="btn-execucao">
+          <img src="./img/icons/maximize-execu.png" width="16px" alt="Aumentar">
+        </button>
+      </div>
+    </div>
+    <div class="cards-execucao-footer"></div>
+      </div>
+
+<!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
+    <div class="main-cards-revisao">
+  <p class="revisao-titulo">Revisão</p>
+
+  <div class="main-cards-revisao-layout">
+      <div class="main-cards-revisao-text">
+        <h1>Título</h1>
+        <p>Prazo xx/xx/xxxx</p>
+        <button class="btn-revisao">
+          Editar
+        </button>
+      </div>
+
+      <div class="main-cards-revisao-btn">
+        <button class="btn-revisao">
+          <img src="./img/icons/close-revisao.png" width="16px" alt="Fechar">
+        </button class="btn-revisao">
+        <button class="btn-revisao">
+          <img src="./img/icons/maximize-revisao.png" width="16px" alt="Aumentar">
+        </button>
+      </div>
+    </div>
+    <div class="cards-revisao-footer"></div>
+      </div>
+
+<!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
+    <div class="main-cards-finalizacao">
+  <p class="finalizacao-titulo">Finalizado</p>
+
+  <div class="main-cards-finalizacao-layout">
+      <div class="main-cards-finalizacao-text">
+        <h1>Título</h1>
+        <p>Prazo xx/xx/xxxx</p>
+        <button class="btn-finalizacao">
+          Editar
+        </button>
+      </div>
+
+      <div class="main-cards-finalizacao-btn">
+        <button class="btn-finalizacao">
+          <img src="./img/icons/close-fim.png" width="16px" alt="Fechar">
+        </button class="btn-finalizacao">
+        <button class="btn-finalizacao">
+          <img src="./img/icons/maximize-fim.png" width="16px" alt="Aumentar">
+        </button>
+      </div>
+    </div>
+    <div class="cards-finalizacao-footer"></div>
+      </div>
+
+
+  </main>
+
+
 
 </body>
 

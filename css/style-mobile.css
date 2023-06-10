@@ -17,9 +17,9 @@ body {
   background-size: auto;
   background-repeat: no-repeat;
 }
-
+/************************* Ínicio CSS do Header *******************************/
 header{
-  display: grid;
+  display: flex;
   justify-content: center;
 }
 
@@ -85,3 +85,309 @@ header{
   background-position: 4% 50%;
 }
 
+/**************************** Fim CSS do Header *******************************/
+
+
+
+/**************************** Inicio CSS dos Cards ****************************/
+:root {
+  --bg-color-afazer: #E63946;
+  --bg-color-execucao: #1D3557;
+  --bg-color-revisao: #457B9D;
+  --bg-color-finalizacao: #77ABBD;
+  --font-weight-ligth: 300;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+.main-cards-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+/****************************  CSS dos Cards Á FAZER **************************/
+
+.main-cards-afazer .afazer-titulo {
+  text-align: center;
+  border-radius: 0 16px 0 16px;
+  background-color: var(--bg-color-afazer);
+  color: white;
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
+.main-cards-afazer {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--bg-color-afazer);
+  margin-bottom: 28px;
+}
+
+.main-cards-afazer-layout {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
+  border: 1px solid var(--bg-color-afazer);
+  backdrop-filter: blur(4px);
+  border-radius: 16px 16px 0px 0px;
+  margin: 16px 16px 0 16px;
+  padding: 4px;
+  width: 225px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-cards-afazer-text h1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+}
+
+.main-cards-afazer-text .btn-afazer {
+  background-color: var(--bg-color-afazer);
+  color: white;
+  width: 40px;
+  height: 10;
+  border-radius: 10px;
+  font-weight: var(--font-weight-ligth);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.main-cards-afazer-text p {
+  font-weight: var(--font-weight-ligth);
+  font-size: 14px;
+}
+
+.main-cards-afazer-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-cards-afazer-btn .btn-afazer{ 
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+
+}
+
+.cards-afazer-footer{
+  width: 235px;
+  height: 10px;
+  border-radius: 0px 0px 16px 16px;
+  margin: 0 16px 0 16px;
+  background-color: var(--bg-color-afazer);
+}
+
+/****************************  CSS dos Cards EXECUÇÃO **************************/
+
+.main-cards-execucao .execucao-titulo {
+  text-align: center;
+  border-radius: 0 16px 0 16px;
+  background-color: var(--bg-color-execucao);
+  color: white;
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
+.main-cards-execucao {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--bg-color-execucao);
+  margin-bottom: 28px;
+}
+
+.main-cards-execucao-layout {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
+  border: 1px solid var(--bg-color-execucao);
+  backdrop-filter: blur(4px);
+  border-radius: 16px 16px 0px 0px;
+  margin: 16px 16px 0 16px;
+  padding: 4px;
+  width: 225px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-cards-execucao-text h1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+}
+
+.main-cards-execucao-text .btn-execucao {
+  background-color: var(--bg-color-execucao);
+  color: white;
+  width: 40px;
+  height: 10;
+  border-radius: 10px;
+  font-weight: var(--font-weight-ligth);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.main-cards-execucao-text p {
+  font-weight: var(--font-weight-ligth);
+  font-size: 14px;
+}
+
+.main-cards-execucao-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-cards-execucao-btn .btn-execucao{ 
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cards-execucao-footer{
+  width: 235px;
+  height: 10px;
+  border-radius: 0px 0px 16px 16px;
+  margin: 0 16px 0 16px;
+  background-color: var(--bg-color-execucao);
+}
+
+/****************************  CSS dos Cards REVISÃO **************************/
+
+.main-cards-revisao .revisao-titulo {
+  text-align: center;
+  border-radius: 0 16px 0 16px;
+  background-color: var(--bg-color-revisao);
+  color: white;
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
+.main-cards-revisao {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--bg-color-revisao);
+  margin-bottom: 28px;
+}
+
+.main-cards-revisao-layout {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
+  border: 1px solid var(--bg-color-revisao);
+  backdrop-filter: blur(4px);
+  border-radius: 16px 16px 0px 0px;
+  margin: 16px 16px 0 16px;
+  padding: 4px;
+  width: 225px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-cards-revisao-text h1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+}
+
+.main-cards-revisao-text .btn-revisao {
+  background-color: var(--bg-color-revisao);
+  color: white;
+  width: 40px;
+  height: 10;
+  border-radius: 10px;
+  font-weight: var(--font-weight-ligth);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.main-cards-revisao-text p {
+  font-weight: var(--font-weight-ligth);
+  font-size: 14px;
+}
+
+.main-cards-revisao-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-cards-revisao-btn .btn-revisao{ 
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cards-revisao-footer{
+  width: 235px;
+  height: 10px;
+  border-radius: 0px 0px 16px 16px;
+  margin: 0 16px 0 16px;
+  background-color: var(--bg-color-revisao);
+}
+
+/****************************  CSS dos Cards Finalização **************************/
+
+.main-cards-finalizacao .finalizacao-titulo {
+  text-align: center;
+  border-radius: 0 16px 0 16px;
+  background-color: var(--bg-color-finalizacao);
+  color: white;
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
+.main-cards-finalizacao {
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--bg-color-finalizacao);
+  margin-bottom: 28px;
+}
+
+.main-cards-finalizacao-layout {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
+  border: 1px solid var(--bg-color-finalizacao);
+  backdrop-filter: blur(4px);
+  border-radius: 16px 16px 0px 0px;
+  margin: 16px 16px 0 16px;
+  padding: 4px;
+  width: 225px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.main-cards-finalizacao-text h1 {
+  font-weight: var(--font-weight-regular);
+  font-size: 24px;
+}
+
+.main-cards-finalizacao-text .btn-finalizacao {
+  background-color: var(--bg-color-finalizacao);
+  color: white;
+  width: 40px;
+  height: 10;
+  border-radius: 10px;
+  font-weight: var(--font-weight-ligth);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.main-cards-finalizacao-text p {
+  font-weight: var(--font-weight-ligth);
+  font-size: 14px;
+}
+
+.main-cards-finalizacao-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-cards-finalizacao-btn .btn-finalizacao{ 
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.cards-finalizacao-footer{
+  width: 235px;
+  height: 10px;
+  border-radius: 0px 0px 16px 16px;
+  margin: 0 16px 0 16px;
+  background-color: var(--bg-color-finalizacao);
+}
+
+/****************************  FIM DO CSS DO CARDS ****************************/
