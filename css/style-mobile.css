@@ -101,8 +101,9 @@ header{
 }
 
 .main-cards-layout{
-  display: flex;
-  flex-direction: column;
+  
+  
+  width: 100%;
 }
 
 /****************************  CSS dos Cards Á FAZER **************************/
@@ -391,3 +392,9 @@ header{
 }
 
 /****************************  FIM DO CSS DO CARDS ****************************/
+
+footer{
+  color: white;
+  text-align: center;
+  background-color: #1D3557;
+}
