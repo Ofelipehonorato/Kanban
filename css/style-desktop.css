@@ -6,46 +6,158 @@
   --font-weight-ligth: 300;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
+  --btn-add-color: #1D3557;
+  --btn-filtro-color: #457B9D;
 }
 
 @media screen and (min-width: 1024px){ 
-  header{
-    
+
+  .header-top{
+    display: flex;
+    width: auto;
   }
 
+  .header-top .titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-left: 28px;
+    width: 100%;
+  }
+
+  .header-adicionar{
+    display: flex;
+    align-items: center;
+    background-color: var(--btn-add-color);
+    width: 224px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 20px 0 20px;
+  }
+  
+  .header-filtrar{
+    display: flex;
+    align-items: center;
+    background-color: var(--btn-filtro-color);
+    width: 240px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 0 20px 0 0;
+  }
+
+   .header-options button p {
+    display: inline-block;
+    font-weight: var(--font-weight-regular);
+    font-size: 16px;
+    color: white;
+    padding-left: 8px;
+  }
+
+  .header-options input{
+    width: 182px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 28px;
+  }
+
+ 
+
+/**************************** Fim CSS do Header *******************************/
+
+/****************************  CSS dos Cards Á FAZER **************************/
   .main-cards-layout {
     display: flex;
     justify-content: center;
+    height: 1080px;
   }
 
   .main-cards-afazer {
     height: auto;
-    border: 1px dashed var(--bg-color-afazer);
-    margin-right: 18px;
+    border-left: 1px dashed var(--bg-color-afazer);
+    border-right: 1px dashed var(--bg-color-afazer);
+    border-bottom: none;
+    margin: 0 18px 0 0;
     transition: all 100ms ease-in-out;
  }
+
+ .main-cards-afazer .afazer-titulo {
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  background-color: var(--bg-color-afazer);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
   /* #cards:hover {
     transform: scale(1.1);
   }  */
 
   .main-cards-execucao {
     height: auto;
-    border: 1px dashed var(--bg-color-execucao);
-    margin-right: 18px;
-  }
+    border-left: 1px dashed var(--bg-color-execucao);
+    border-right: 1px dashed var(--bg-color-execucao);
+    border-bottom: none;
+    margin: 0 18px 0 0;
+    transition: all 100ms ease-in-out;
+ }
 
-  .main-cards-revisao {
-    height: auto;
-    border: 1px dashed var(--bg-color-revisao);
-    margin-right: 18px;
-  }
+ .main-cards-execucao .execucao-titulo {
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  background-color: var(--bg-color-execucao);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: var(--font-weight-ligth); 
+  padding: 2px;
+}
+
+.main-cards-revisao {
+  height: auto;
+  border-left: 1px dashed var(--bg-color-revisao);
+  border-right: 1px dashed var(--bg-color-revisao);
+  border-bottom: none;
+  margin: 0 18px 0 0;
+  transition: all 100ms ease-in-out;
+}
+
+.main-cards-revisao .revisao-titulo {
+text-align: center;
+border-radius: 0 0 16px 16px;
+background-color: var(--bg-color-revisao);
+color: white;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-weight: var(--font-weight-ligth); 
+padding: 2px;
+}
+
+.main-cards-finalizacao {
+  height: auto;
+  border-left: 1px dashed var(--bg-color-finalizacao);
+  border-right: 1px dashed var(--bg-color-finalizacao);
+  margin: 0 0 0 0;
+  border-bottom: none;
+  transition: all 100ms ease-in-out;
+}
+
+.main-cards-finalizacao .finalizacao-titulo {
+text-align: center;
+border-radius: 0 0 16px 16px;
+background-color: var(--bg-color-finalizacao);
+color: white;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-weight: var(--font-weight-ligth); 
+padding: 2px;
+}
 
 
-  .main-cards-finalizacao {
-    height: auto;
-    border: 1px dashed var(--bg-color-finalizacao);
-    margin-right: 18px;
-  }
 
 
 }
