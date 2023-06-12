@@ -12,6 +12,8 @@
 
 @media screen and (min-width: 1024px){ 
 
+
+
   .header-top{
     display: flex;
     width: auto;
@@ -71,14 +73,45 @@
 /**************************** Fim CSS do Header *******************************/
 
 /****************************  CSS dos Cards Á FAZER **************************/
+  ::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:  rgba(121, 108, 108, 0.5); 
+  }
+
+
+  .main-cards-scroll{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-padding-left: 20px;
+    width: 90%;
+    padding-left: 27px;
+    height:1033px;
+    margin-top: 20px;
+  }
+
+
   .main-cards-layout {
     display: flex;
     justify-content: center;
     height: 1080px;
   }
 
+  .main-cards-afazer-layout,.main-cards-execucao-layout,
+  .main-cards-revisao-layout, .main-cards-finalizacao-layout {
+    margin: 0 16px 16px 0;
+  }
+
   .main-cards-afazer {
-    height: auto;
     border-left: 1px dashed var(--bg-color-afazer);
     border-right: 1px dashed var(--bg-color-afazer);
     border-bottom: none;
