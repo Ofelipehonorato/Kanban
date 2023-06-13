@@ -24,7 +24,6 @@ draggableElement.addEventListener("dragstart", e => {
    const droppedElementId = e.dataTransfer.getData("text/plain");
    //Capturando os dados da const acima
    const droppedElement = document.getElementById(droppedElementId);
-   dropZone.style.backgroun = 'red'
    dropZone.appendChild(droppedElement);
    //Quando a DIV deixar o drpZone volta a ficar com a cor nomal
    dropZone.classList.remove("drop-zone--over");
