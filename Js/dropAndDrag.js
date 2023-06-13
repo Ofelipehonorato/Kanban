@@ -71,26 +71,26 @@ function dragover() {
   const status = cardSelected.querySelector(".status");
 
   //Dependendo do background encontrado, seta a cor atual e remove as outras.
-  if (style.backgroundColor === "rgb(128, 128, 128)") {
+  if (style.backgroundColor === "rgb(119,171,189)") {
     status.classList.remove("red");
     status.classList.remove("blue");
-    status.classList.remove("green");
-    status.classList.add("gray");
-  } else if (style.backgroundColor === "rgb(255, 0, 0)") {
-    status.classList.remove("blues");
-    status.classList.remove("green");
-    status.classList.remove("gray");
-    status.classList.add("red");
-  } else if (style.backgroundColor === "rgb(51, 173, 255)") {
-    status.classList.remove("green");
-    status.classList.remove("gray");
+    status.classList.remove("darkblue");
+    status.classList.add("lightblue");
+  } else if (style.backgroundColor === "rgb(69,123,157)") {
+    status.classList.remove("blue");
+    status.classList.remove("darkblue");
     status.classList.remove("red");
+    status.classList.add("darkblue");
+  } else if (style.backgroundColor === "rgb(29,53,87)") {
+    status.classList.remove("red");
+    status.classList.remove("lightblue");
+    status.classList.remove("darkblue");
     status.classList.add("blue");
-  } else if (style.backgroundColor === "rgb(35, 210, 172)") {
-    status.classList.remove("yellow");
-    status.classList.remove("red");
+  } else if (style.backgroundColor === "rgb(230,57,70)") {
     status.classList.remove("blue");
-    status.classList.add("green");
+    status.classList.remove("lightblue");
+    status.classList.remove("darkblue");
+    status.classList.add("red");
   }
   
 } 
