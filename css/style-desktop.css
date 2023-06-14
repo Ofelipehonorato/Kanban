@@ -10,7 +10,7 @@
   --btn-filtro-color: #457B9D;
 }
 
-@media screen and (min-width: 1024px){ 
+@media screen and (min-width: 1240px){ 
 
   .header-top{
     display: flex;
@@ -99,23 +99,20 @@
   .over {
     background-color: #4cd13711;
   }
-
-
-  /* .main-cards-scroll{
+  
+  .cards-scroll{
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
     scroll-padding-left: 20px;
-    width: 90%;
-    padding-left: 27px;
-    height:1033px;
+    height:auto;
     margin-top: 20px;
-  } */
+  }
 
   .dropzone {
-    height: 1080px;
+    min-height: 1080px;
   } 
 
   .main-cards-layout {
@@ -125,7 +122,6 @@
     align-items: center;
     
   }
- 
  .main-cards-status {
   padding-bottom: 12px;
   width: 288px;

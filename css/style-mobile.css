@@ -106,8 +106,6 @@ header{
   --font-weight-semibold: 600;
 }
 
-
-
 /****************************  FIM DO CSS DO CARDS ****************************/
 
 
@@ -115,11 +113,7 @@ header{
   display: flex;
   flex-direction: column;
 }
-
 /* Titulo dos cards */
-
-
-
 .main-cards-status .main-cards-titulo{
   text-align: center;
   border-radius: 0 0 16px 16px;
@@ -149,6 +143,7 @@ header{
   width: auto;
 }
 
+
 .main-cards-status .dropzone.afazer {
   border-bottom: 1px dashed var(--bg-color-afazer);
 }
@@ -162,42 +157,15 @@ header{
   border-bottom: 1px dashed var(--bg-color-finalizacao);
 }
 
-
 .dropzone {
-  height: auto;
+  min-height: 94px;
+  max-height: 130px;
+  margin-top: -27px;
 } 
-
-.card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
-  border: 1px solid var(--bg-color-afazer);
-  border-bottom: 8px solid var(--bg-color-afazer);
-  backdrop-filter: blur(4px);
-  border-radius: 10px;
-  margin: 26px;
-  padding: 4px;
-  width: 225px;
-  display: grid;
-  grid-template-columns: 2px 190px 30px ;
-  scroll-snap-align: start;
-}
-
-.card.execucao {
-  border: 1px solid var(--bg-color-execucao);
-  border-bottom: 8px solid var(--bg-color-execucao);
-}
-.card.revisao {
-  border: 1px solid var(--bg-color-revisao);
-  border-bottom: 8px solid var(--bg-color-revisao);
-}
-.card.finalizacao {
-  border: 1px solid var(--bg-color-finalizacao);
-  border-bottom: 8px solid var(--bg-color-finalizacao);
-}
 
 .content h2 {
   font-weight: var(--font-weight-regular);
   font-size: 18px;
-  padding-top:8px;
 }
 
 .content p {
@@ -206,7 +174,6 @@ header{
 }
 
 .content button{
-  background-color: var(--bg-color-afazer);
   color: white;
   width: 40px;
   border-radius: 10px;
@@ -215,11 +182,14 @@ header{
   cursor: pointer;
 }
 
-.btn-afazer {
+.btn {
   background: transparent;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
+.content.afazer button{
+  background-color: var(--bg-color-afazer);
+}
 .content.execucao button{
   background-color: var(--bg-color-execucao);
 }
@@ -238,30 +208,42 @@ header{
   background: transparent;
 }
 
+.cards-scroll{
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+  display: grid;
+  grid-auto-flow: column;
+}
+
 .status {
-  width: 30px;
-  height: 8px;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 16px;
-  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  margin: 28px 26px 0 26px;
+  padding: 4px;
+  width: 225px;
+  display: grid;
+  grid-template-columns: 190px 30px ;
+  scroll-snap-align: start;
 }
 
 .status.red {
-  background-color: var(--bg-color-afazer);
+  border: 1px solid rgb(230, 57, 70);
+  border-bottom: 8px solid rgb(230, 57, 70);
 }
-
 .status.blue {
-  background-color: var(--bg-color-execucao);
+  border: 1px solid rgb(29, 53, 87);
+  border-bottom: 8px solid rgb(29, 53, 87);
 }
-
 .status.darkblue {
-  background-color: var(--bg-color-revisao);
+  border: 1px solid rgb(69, 123, 157);
+  border-bottom: 8px solid rgb(69, 123, 157);
 }
-
 .status.lightblue {
-  background-color: var(--bg-color-finalizacao);
+  border: 1px solid rgb(119, 171, 189);
+  border-bottom: 8px solid rgb(119, 171, 189);
 }
-
 
 .legend {
   width: 50px;
@@ -269,31 +251,30 @@ header{
   background-color: rgb(255, 0, 0);
   border-radius: 4px;
   margin-left: 20px;
-  margin-top: -15px;
 }
 
 .red {
-  background-color: var(--bg-color-afazer);
+  background-color: rgba(230, 57, 71, 0.01);
 }
 
 .blue {
-  background-color: var(--bg-color-execucao);
+  background-color: rgba(29, 53, 87, 0.01);
 }
 
 .darkblue {
-  background-color: var(--bg-color-revisao);
+  background-color: rgba(69, 123, 157, 0.01);
 }
 
 .lightblue {
-  background-color: var(--bg-color-finalizacao);
+  background-color: rgba(119, 171, 189, 0.01);
 }
 
 
 .highlight {
-  background-color: #00000008;
+  background-color: #00000017;
 }
 
-.card, .dropzone {
+.card {
   transition: 10ms;
 }
 
@@ -303,11 +284,8 @@ header{
 }
 
 .over {
-  background-color: #22ff00;
+  background-color: #dcdcdc;
 }
-
-
-
 /****************************  FIM DO CSS DO CARDS ****************************/
 
 footer{
