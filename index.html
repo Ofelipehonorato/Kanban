@@ -22,7 +22,7 @@
       </div>
 
       <div class="header-options">
-        <button class="header-adicionar" id="btnadd" type="button">
+        <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
           <p>Adicionar</p>
         </button>
@@ -39,14 +39,14 @@
 
   <main class="main-cards-layout">
     <!-- ********************** CARD DA COLUNA A FAZER ********************** -->
-    <div class="main-cards-status">
+    <div class="main-cards-status" id="mainCardStatus">
       <h1 class="main-cards-titulo afazer">A Fazer</h1>
-      <div class="dropzone afazer" id="myDiv">
+      <div class="dropzone afazer" id="dropzone">
         <div class="legend red"></div>
         <div class="cards-scroll">
-          <div class="card afazer" draggable="true">
-            <div class="status red">
-              <div class="content afazer"> 
+          <div class="card afazer" id="afazer" draggable="true">
+            <div class="status red" id="statusRed">
+              <div class="content afazer" id="contentAfazerId"> 
                 <h2>Título A fazer</h2>
                 <p>Prazo xx/xx/xxxx</p>
                 <!-- <button class="btn-afazer">
@@ -71,7 +71,7 @@
     <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
     <div class="main-cards-status">
       <h1 class="main-cards-titulo execucao">Execução</h1>
-      <div class="dropzone execucao" id="myDiv">
+      <div class="dropzone execucao">
         <div class="legend blue"></div>
         <div class="cards-scroll">
           <div class="card execucao" draggable="true">
@@ -101,7 +101,7 @@
     <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
     <div class="main-cards-status">
       <h1 class="main-cards-titulo revisao">Revisão</h1>
-      <div class="dropzone revisao" id="myDiv">
+      <div class="dropzone revisao">
         <div class="legend darkblue"></div>
         <div class="cards-scroll">
           <div class="card revisao" draggable="true">
@@ -131,7 +131,7 @@
     <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
     <div class="main-cards-status">
       <h1 class="main-cards-titulo finalizacao">Finalização</h1>
-      <div class="dropzone finalizacao" id="myDiv">
+      <div class="dropzone finalizacao" >
         <div class="legend lightblue"></div>
         <div class="cards-scroll">
           <div class="card finalizacao" draggable="true">
@@ -162,6 +162,7 @@
   
   <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
 <script src="./js/dropAndDrag.js"></script>
+<script src="./Js/button.js" defer></script>
 </body>
 
 </html>
