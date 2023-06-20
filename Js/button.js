@@ -1,18 +1,35 @@
 import { dragstart, drag, dragend, drop } from "./dropAndDrag.js";
+
 const btnAdd = document.querySelector("#btnAdd");
 const cloneCardContainer = document.querySelector("#cloneCard");
 
 btnAdd.addEventListener("click", function() {
     const cardToClone = cloneCardContainer.querySelector(".card");
-    const cloneCard = cardToClone.cloneNode(true);
-    cloneCardContainer.appendChild(cloneCard);
 
-    // Adicionar ouvintes de eventos de arrastar e soltar nos cards clonados
-    cloneCard.addEventListener("dragstart", dragstart);
-    cloneCard.addEventListener("drag", drag);
-    cloneCard.addEventListener("dragend", dragend);
-    cloneCard.addEventListener("drop", drop);
+    // Verificar se a coluna "A Fazer" possui um card para clonar
+    if (cardToClone) {
+        // Exibir um prompt para o usuário inserir o título
+        const title = prompt("Digite o título:");
+
+        // Verificar se o usuário inseriu um título
+        if (title) {
+            const cloneCard = cardToClone.cloneNode(true);
+
+            // Atualizar o título do card clonado com o valor inserido pelo usuário
+            const titleElement = cloneCard.querySelector("h2");
+            titleElement.textContent = title;
+
+            cloneCardContainer.appendChild(cloneCard);
+
+            // Adicionar ouvintes de eventos de arrastar e soltar nos cards clonados
+            cloneCard.addEventListener("dragstart", dragstart);
+            cloneCard.addEventListener("drag", drag);
+            cloneCard.addEventListener("dragend", dragend);
+            cloneCard.addEventListener("drop", drop);
+        }
+    }
 });
+
 
 
 // const btnAdd = document.getElementById("btnAdd")
