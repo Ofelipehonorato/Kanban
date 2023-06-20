@@ -20,11 +20,25 @@
         <button class="titulo-img-lapis"><img src="./img/icons/pencil.png" alt="Editar" width="16px"></button>
         <h1>Meu Kanban</h1>
       </div>
+
       <div class="header-options">
+
         <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
           <p>Adicionar</p>
         </button>
+
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <h2>Insira o titulo da sua tarefa</h2>
+            <input type="text" id="inputText" placeholder="Insira o título">
+            <button class="header-adicionar"  id="addButton">
+              <img src="./img/icons/add.png" alt="Adicionar" width="16px">
+              <p>Adicionar</p>
+            </button>
+          </div>
+        </div>
+
         <button class="header-filtrar">
           <img src="./img/icons/filtrar.png" alt="Adicionar" width="16px">
           <p>Filtrar</p>
