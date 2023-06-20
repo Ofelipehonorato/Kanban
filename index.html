@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style-mobile.css">
   <link rel="stylesheet" href="./css/style-desktop.css">
-  <script src="./Js/button.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -23,7 +22,7 @@
       </div>
 
       <div class="header-options">
-        <button class="header-adicionar" id="btnadd" type="button">
+        <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
           <p>Adicionar</p>
         </button>
@@ -40,284 +39,130 @@
 
   <main class="main-cards-layout">
     <!-- ********************** CARD DA COLUNA A FAZER ********************** -->
-    <div class="main-cards-afazer">
-      <p class="afazer-titulo">A Fazer</p>
-      <div class="main-cards-scroll">
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
+    <div class="main-cards-status" id="mainCardStatus">
+      <h1 class="main-cards-titulo afazer">A Fazer</h1>
+      <div class="dropzone afazer" id="dropzone">
+        <div class="legend red"></div>
+        <div class="cards-scroll" id="cloneCard">
+          <div class="card afazer" id="afazer" draggable="true">
+            <div class="status red" id="statusRed">
+              <div class="content afazer" id="contentAfazerId"> 
+                <h2>Título A fazer</h2>
+                <p>Prazo xx/xx/xxxx</p>
+                <!-- <button class="btn-afazer">
+                  Editar
+                </button> -->
+              </div>
+                <div class="main-cards-btn">
+                  <!-- <button  class="btn" >
+                    <img id="btnAfazer" src="" width="16px" alt="Fechar">
+                  </button> -->
+                  <!-- <button class="btn">
+                    <img id="iconMaior" src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
+                  </button> -->
+                </div>
+            </div>
           </div>
         </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>
-
-        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>        <div class="main-cards-afazer-layout" id="cards">
-          <div class="main-cards-afazer-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-afazer">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-afazer-btn">
-            <button class="btn-afazer">
-              <img src="./img/icons/close-fazer.png" width="16px" alt="Fechar">
-            </button>
-            <button class="btn-afazer">
-              <img src="./img/icons/maximize-fazer.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-
-        </div>
-
       </div>
-
-    </div>
-
-      </div>
-      
-   
+     
     </div>
 
     <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
-    <div class="main-cards-execucao">
-      <p class="execucao-titulo">Execução</p>
-      <div class="main-cards-scroll">
-        <div class="main-cards-execucao-layout" id="cards">
-          <div class="main-cards-execucao-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-execucao">
-              Editar
-            </button>
-          </div>
-  
-          <div class="main-cards-execucao-btn">
-            <button class="btn-execucao">
-              <img src="./img/icons/close-execu.png" width="16px" alt="Fechar">
-            </button class="btn-execucao">
-            <button class="btn-execucao">
-              <img src="./img/icons/maximize-execu.png" width="16px" alt="Aumentar">
-            </button>
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo execucao">Execução</h1>
+      <div class="dropzone execucao">
+        <div class="legend blue"></div>
+        <div class="cards-scroll">
+          <div class="card execucao" draggable="true">
+            <div class="status blue">
+              <div class="content execucao"> 
+                <h2>Título Execução</h2>
+                <p>Prazo xx/xx/xxxx</p>
+                <!-- <button class="btn-afazer">
+                  Editar
+                </button> -->
+              </div>
+                <div class="main-cards-btn">
+                  <!-- <button  class="btn" >
+                    <img id="btnExecucao" src="" width="16px">
+                  </button> -->
+                  <!-- <button class="btn">
+                    <img id="iconMaior" src="./img/icons/maximize-execu.png" width="16px" alt="Aumentar">
+                  </button> -->
+                </div>
+            </div>
           </div>
         </div>
       </div>
+       
     </div>
 
     <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
-    <div class="main-cards-revisao">
-      <p class="revisao-titulo">Revisão</p>
-      <div class="main-cards-scroll">
-        <div class="main-cards-revisao-layout" id="cards">
-          <div class="main-cards-revisao-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-revisao">
-              Editar
-            </button>
-          </div>
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo revisao">Revisão</h1>
+      <div class="dropzone revisao">
+        <div class="legend darkblue"></div>
+        <div class="cards-scroll">
+          <div class="card revisao" draggable="true">
+            <div class="status darkblue">
+              <div class="content revisao"> 
+                <h2>Título Revisão</h2>
+                <p>Prazo xx/xx/xxxx</p>
+                <!-- <button class="btn-afazer">
+                  Editar
+                </button> -->
+              </div>
+                <div class="main-cards-btn">
+                  <!-- <button class="btn" >
+                    <img id="btnRevisao" src="" width="16px" alt="Fechar">
+                  </button> -->
+                  <!-- <button class="btn">
+                    <img id="iconMaior" src="./img/icons/maximize-revisao.png" width="16px" alt="Aumentar">
+                  </button> -->
+                </div>
+            </div>
 
-          <div class="main-cards-revisao-btn">
-            <button class="btn-revisao">
-              <img src="./img/icons/close-revisao.png" width="16px" alt="Fechar">
-            </button class="btn-revisao">
-            <button class="btn-revisao">
-              <img src="./img/icons/maximize-revisao.png" width="16px" alt="Aumentar">
-            </button>
-          </div>
-        </div>     
-      </div> 
-    </div>
-
-    <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
-    <div class="main-cards-finalizacao">
-      <p class="finalizacao-titulo">Finalizado</p>
-      <div class="main-cards-scroll">
-        <div class="main-cards-finalizacao-layout" id="cards">
-          <div class="main-cards-finalizacao-text">
-            <h1>Título</h1>
-            <p>Prazo xx/xx/xxxx</p>
-            <button class="btn-finalizacao">
-              Editar
-            </button>
-          </div>
-
-          <div class="main-cards-finalizacao-btn">
-            <button class="btn-finalizacao">
-              <img src="./img/icons/close-fim.png" width="16px" alt="Fechar">
-            </button class="btn-finalizacao">
-            <button class="btn-finalizacao">
-              <img src="./img/icons/maximize-fim.png" width="16px" alt="Aumentar">
-            </button>
           </div>
         </div>
-      </div>  
-    </div>
+      </div>
 
+    </div>
+    <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo finalizacao">Finalização</h1>
+      <div class="dropzone finalizacao" >
+        <div class="legend lightblue"></div>
+        <div class="cards-scroll">
+          <div class="card finalizacao" draggable="true">
+            <div class="status lightblue">
+              <div class="content finalizacao"> 
+                <h2>Título Finalização</h2>
+                <p>Prazo xx/xx/xxxx</p>
+                <!-- <button id="editarBtn" class="btn-afazer">
+                  Editar
+                </button> -->
+              </div>
+                <div class="main-cards-btn">
+                  <!-- <button class="btn" >
+                    <img id="btnFim" src="" width="16px" alt="Fechar">
+                  </button> -->
+                  <!-- <button class="btn">
+                    <img id="iconMaior" src="./img/icons/maximize-fim.png" width="16px" alt="Aumentar">
+                  </button> -->
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+       
+    </div>
   </main>
+  
   <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
+<script type="module" src="./js/dropAndDrag.js"></script>
+<script type="module" src="./Js/button.js" defer></script>
 </body>
 
 </html>
