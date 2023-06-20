@@ -1,3 +1,17 @@
+
+const btnAdd = document.querySelector("#btnAdd");
+const cloneCardContainer = document.querySelector("#cloneCard");
+
+btnAdd.addEventListener("click", function() {
+    const cardToClone = cloneCardContainer.querySelector(".card");
+    const cloneCard = cardToClone.cloneNode(true);
+    cloneCardContainer.appendChild(cloneCard);
+});
+
+
+
+
+
 // const btnAdd = document.getElementById("btnAdd")
 // btnAdd.addEventListener("click", addNew)
 
@@ -26,10 +40,10 @@
   
 // }
 
-const btnAdd = document.querySelector("#btnAdd")
-console.log(btnAdd)
+// const btnAdd = document.querySelector("#btnAdd")
+// console.log(btnAdd)
 
-btnAdd.addEventListener("click", function(){
-    const parent = this.firstChild
-    console.log(parent)
-})
+// btnAdd.addEventListener("click", function(){
+//     const parent = this.firstChild
+//     console.log(parent)
+// })
