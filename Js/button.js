@@ -1,4 +1,4 @@
-
+import { dragstart, drag, dragend, drop } from "./dropAndDrag.js";
 const btnAdd = document.querySelector("#btnAdd");
 const cloneCardContainer = document.querySelector("#cloneCard");
 
@@ -6,10 +6,13 @@ btnAdd.addEventListener("click", function() {
     const cardToClone = cloneCardContainer.querySelector(".card");
     const cloneCard = cardToClone.cloneNode(true);
     cloneCardContainer.appendChild(cloneCard);
+
+    // Adicionar ouvintes de eventos de arrastar e soltar nos cards clonados
+    cloneCard.addEventListener("dragstart", dragstart);
+    cloneCard.addEventListener("drag", drag);
+    cloneCard.addEventListener("dragend", dragend);
+    cloneCard.addEventListener("drop", drop);
 });
-
-
-
 
 
 // const btnAdd = document.getElementById("btnAdd")
