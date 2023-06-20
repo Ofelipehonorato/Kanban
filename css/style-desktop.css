@@ -100,32 +100,45 @@
     background-color: #4cd13711;
   }
   
-  .cards-scroll{
-    display: flex;
-    flex-direction: column;
+  .dropzone {
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    scroll-padding-left: 20px;
-    height:auto;
-    margin-top: 20px;
+    white-space: nowrap;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 6px;
+  } 
+  
+  .card{
+    display: block;
+    transition: transform 0.3s;
   }
 
-  .dropzone {
-    min-height: 1080px;
-  } 
+  .card:hover {
+    transform: scale(1.02);
+  }
 
   .main-cards-layout {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
-    
+    align-items: flex-start;
   }
+
  .main-cards-status {
   padding-bottom: 12px;
   width: 288px;
   padding-right: 20px;
+}
+
+.status{
+  margin: 0 22px 14px 22px;
+  padding: 4px;
+  width: 222px;
+  display: grid;
+  grid-template-columns: 190px 30px ;
 }
 
  .main-cards-status .dropzone.afazer {
@@ -148,9 +161,5 @@
   border-right: 1px dashed var(--bg-color-finalizacao);
   border-bottom: none;
 }
-
-
-
-
 
 }

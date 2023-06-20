@@ -137,6 +137,12 @@ header{
 
 
 /* Layout de todos os cards */
+.card{
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
 .main-cards-status {
   padding-bottom: 12px;
   width: 288px;
@@ -158,10 +164,18 @@ header{
 }
 
 .dropzone {
-  min-height: 94px;
-  max-height: 130px;
-  margin-top: -27px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 120px;
 } 
+
+.card{
+  display: inline-block;
+}
 
 .content h2 {
   font-weight: var(--font-weight-regular);
@@ -208,24 +222,15 @@ header{
   background: transparent;
 }
 
-.cards-scroll{
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 20px;
-  display: grid;
-  grid-auto-flow: column;
-}
-
 .status {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(241, 250, 238, 0.1) 100%);
   backdrop-filter: blur(4px);
   border-radius: 10px;
-  margin: 28px 26px 0 26px;
+  margin: 0 26px 15px 0;
   padding: 4px;
   width: 225px;
   display: grid;
   grid-template-columns: 190px 30px ;
-  scroll-snap-align: start;
 }
 
 .status.red {
