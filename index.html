@@ -20,7 +20,6 @@
         <button class="titulo-img-lapis"><img src="./img/icons/pencil.png" alt="Editar" width="16px"></button>
         <h1>Meu Kanban</h1>
       </div>
-
       <div class="header-options">
         <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
@@ -55,22 +54,16 @@
           </div>
         </div>
       </div>
-    </div>
     <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
       <div class="main-cards-status">
         <h1 class="main-cards-titulo execucao">Execução</h1>
         <div class="dropzone execucao">
           <div class="legend blue"></div>
-          <div class="cards-scroll">
             <div class="card execucao" draggable="true">
-              <div class="status blue">
-                <div class="content execucao"> 
-                  <h2>Título Execução</h2>
-                  <p>Prazo xx/xx/xxxx</p>
-                </div>
+              <div class="status blue" style="display: none;">
+                <div class="content execucao"></div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
@@ -78,14 +71,9 @@
         <h1 class="main-cards-titulo revisao">Revisão</h1>
         <div class="dropzone revisao">
           <div class="legend darkblue"></div>
-          <div class="cards-scroll">
             <div class="card revisao" draggable="true">
-              <div class="status darkblue">
-                <div class="content revisao"> 
-                  <h2>Título Revisão</h2>
-                  <p>Prazo xx/xx/xxxx</p>
-                </div>
-              </div>
+              <div class="status darkblue" style="display: none;">
+                <div class="content revisao"></div>
             </div>
           </div>
         </div>
@@ -95,15 +83,8 @@
         <h1 class="main-cards-titulo finalizacao">Finalização</h1>
         <div class="dropzone finalizacao" >
           <div class="legend lightblue"></div>
-          <div class="cards-scroll">
             <div class="card finalizacao" draggable="true">
-              <div class="status lightblue">
-                <div class="content finalizacao"> 
-                  <h2>Título Finalização</h2>
-                  <p>Prazo xx/xx/xxxx</p>
-                </div>
-              </div>
-            </div>
+              <div class="status lightblue" style="display: none;"></div>
           </div>
         </div>  
       </div>
@@ -113,5 +94,4 @@
 <script type="module" src="./js/dropAndDrag.js" ></script>
 <script type="module" src="./Js/button.js" defer></script>
 </body>
-
 </html>
