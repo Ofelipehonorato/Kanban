@@ -43,6 +43,9 @@ function addText() {
 
 // Função que insere o nome no titulo do kanban //
 
+let btnedit = document.getElementById("btnedit")
+btnedit.addEventListener("click", editarNome)
+
 function editarNome(){
   let titulo = document.getElementById("tituloEdit")
   let novoTitulo = prompt("Insira o nome do seu kanban")
@@ -53,8 +56,7 @@ function editarNome(){
     alert("O titulo não pode ficar vazio!!")
   }
 }
-var btnedit = document.getElementById("btnedit")
-btnedit.addEventListener("click", editarNome)
+
 
 
 

@@ -45,7 +45,12 @@
         </button> -->
 
         <div class="header-options-filtrar">
-          <input type="text" id="imgBuscar" placeholder="Busque por cards, assuntos">
+          <div class="options-filtrar-busca">
+           <input type="text" id="buscarCard"  placeholder="Busque por cards, assuntos....">
+          </div>
+          <div class="options-filtrar-img">
+            <img src="./img/icons/buscar.png" alt="Buscar" width="16px"  >
+          </div>
         </div>
       </div>
   </header>
@@ -58,12 +63,12 @@
           <div class="legend red"></div>
           <div id="cloneCard">
             <div class="card afazer" id="afazer" draggable="true">
-              <div class="status red" id="statusRed">
-                <div class="content afazer" id="contentAfazerId"> 
+              <ul class="status red" id="statusRed">
+                <li class="content afazer" id="contentAfazerId"> 
                   <h2>Título A fazer</h2>
-                  <p>Prazo xx/xx/xxxx</p>
-                </div>
-              </div>
+                  <!-- <p>Prazo xx/xx/xxxx</p> -->
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -74,9 +79,9 @@
         <div class="dropzone execucao">
           <div class="legend blue"></div>
             <div class="card execucao" draggable="true">
-              <div class="status blue" style="display: none;">
-                <div class="content execucao"></div>
-              </div>
+              <ul class="status blue" style="display: none;">
+                <li class="content execucao"></li>
+              </ul>
             </div>
         </div>
       </div>
@@ -86,9 +91,9 @@
         <div class="dropzone revisao">
           <div class="legend darkblue"></div>
             <div class="card revisao" draggable="true">
-              <div class="status darkblue" style="display: none;">
-                <div class="content revisao"></div>
-            </div>
+              <ul class="status darkblue" style="display: none;">
+                <li class="content revisao"></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -97,14 +102,15 @@
         <h1 class="main-cards-titulo finalizacao">Finalização</h1>
         <div class="dropzone finalizacao" >
           <div class="legend lightblue"></div>
-            <div class="card finalizacao" draggable="true">
-              <div class="status lightblue" style="display: none;"></div>
-          </div>
+            <ul class="card finalizacao" draggable="true">
+              <li class="status lightblue" style="display: none;"></li>
+          </ul>
         </div>  
       </div>
   </main>
 
 <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
+<script type="module" src="./js/busca.js" defer></script>
 <script type="module" src="./js/dropAndDrag.js" ></script>
 <script type="module" src="./Js/buttons.js" defer></script>
 </body>
