@@ -42,6 +42,7 @@ header{
 
 .titulo .titulo-img-lapis{
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header-options {
