@@ -62,7 +62,6 @@ export function dragover(event) {
   }
 }
 
-
 export function dragleave() {
   this.classList.remove('over')
 }
