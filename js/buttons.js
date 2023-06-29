@@ -56,6 +56,18 @@ function editarNome(){
     alert("O titulo não pode ficar vazio!!")
   }
 }
+//Mudando texto card
+function newText() {
+        const changeText = document.getElementById("test")
+        const novoTitulo= prompt('Informe o novo Título')
+        changeText.innerHTML = novoTitulo ;
+        console.log('Clicou');
+    }
+
+    const element = document.getElementById("test");
+    element.addEventListener("click", newText);
+
+
 
 
 
