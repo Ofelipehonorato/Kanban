@@ -162,9 +162,9 @@
     transition: transform 0.3s;
   }
 
-  .card:hover {
+  /* .card:hover {
     transform: scale(1.02);
-  }
+  } */
 
   .main-cards-layout {
     display: flex;
@@ -208,4 +208,7 @@
   border-bottom: none;
 }
 
+.inputButton button img{
+  background: none;
+}
 }
