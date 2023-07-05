@@ -10,14 +10,14 @@
   --btn-filtro-color: #457B9D;
 }
 
-@media screen and (min-width: 1240px){ 
+@media screen and (min-width: 1240px) {
 
-  .header-top{
+  .header-top {
     display: flex;
     width: auto;
   }
 
-  .header-top .titulo{
+  .header-top .titulo {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -26,7 +26,7 @@
     width: 100%;
   }
 
-  .header-adicionar{
+  .header-adicionar {
     display: flex;
     align-items: center;
     background-color: var(--btn-add-color);
@@ -37,7 +37,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 0 20px 0 20px;
   }
-  
+
   /* .header-filtrar{
     display: flex;
     align-items: center;
@@ -50,7 +50,7 @@
     margin: 0 20px 0 0;
   } */
 
-   .header-options button p {
+  .header-options button p {
     display: inline-block;
     font-weight: var(--font-weight-regular);
     font-size: 16px;
@@ -58,23 +58,23 @@
     padding-left: 8px;
   }
 
-  .header-options input{
+  .header-options input {
     width: 182px;
     height: 40px;
     border-radius: 8px 0 0 8px;
     padding-left: 8px;
   }
 
-  .header-options-filtrar{
+  .header-options-filtrar {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
-  .options-filtrar-img img{
+  .options-filtrar-img img {
     opacity: 0.5;
     transition: transform 0.2s;
   }
 
-  .options-filtrar-img img:hover{
+  .options-filtrar-img img:hover {
     opacity: none;
     transform: scale(1.1);
   }
@@ -89,7 +89,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
   }
-  
+
   .popup-content {
     position: absolute;
     top: 50%;
@@ -103,7 +103,7 @@
     align-items: center;
   }
 
-  #inputText{
+  #inputText {
     width: 212px;
     padding-left: 12px;
     margin: 0 0 16px 20px;
@@ -114,38 +114,41 @@
     font-weight: var(--font-weight-regular);
     margin-bottom: 12px;
   }
-/**************************** Fim CSS do Header *******************************/
 
-/****************************  CSS dos Cards Á FAZER **************************/
-  ::-webkit-scrollbar{
+  /**************************** Fim CSS do Header *******************************/
+
+  /****************************  CSS dos Cards Á FAZER **************************/
+  ::-webkit-scrollbar {
     width: 8px;
   }
+
   ::-webkit-scrollbar-track {
     border-radius: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background:  rgba(121, 108, 108, 0.5); 
+    background: rgba(121, 108, 108, 0.5);
   }
 
   .highlight {
     background-color: #FD951F08;
   }
-  
-  .card, .dropzone {
+
+  .card,
+  .dropzone {
     transition: 400ms;
   }
-  
+
   .is-dragging {
     cursor: move;
     opacity: 0.3;
   }
-  
+
   .over {
     background-color: #4137d111;
   }
-  
+
   .dropzone {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -155,9 +158,9 @@
     flex-direction: column;
     box-sizing: border-box;
     margin-top: 6px;
-  } 
-  
-  .card{
+  }
+
+  .card {
     display: block;
     transition: transform 0.3s;
   }
@@ -173,42 +176,54 @@
     align-items: flex-start;
   }
 
- .main-cards-status {
-  padding-bottom: 12px;
-  width: 288px;
-  padding-right: 20px;
-}
+  .main-cards-status {
+    padding-bottom: 12px;
+    width: 288px;
+    padding-right: 20px;
+  }
 
-.status{
-  margin: 0 22px 14px 22px;
-  padding: 4px;
-  width: 222px;
-  display: grid;
-  grid-template-columns: 190px 30px ;
-}
+  .status {
+    margin: 0 22px 14px 22px;
+    padding: 4px;
+    width: 222px;
+    display: grid;
+    grid-template-columns: 190px 30px;
+  }
 
- .main-cards-status .dropzone.afazer {
-  border-left: 1px dashed var(--bg-color-afazer);
-  border-right: 1px dashed var(--bg-color-afazer);
-  border-bottom: none;
-}
-.main-cards-status .dropzone.execucao {
-  border-left: 1px dashed var(--bg-color-execucao);
-  border-right: 1px dashed var(--bg-color-execucao);
-  border-bottom: none;
-}
-.main-cards-status .dropzone.revisao {
-  border-left: 1px dashed var(--bg-color-revisao);
-  border-right: 1px dashed var(--bg-color-revisao);
-  border-bottom: none;
-}
-.main-cards-status .dropzone.finalizacao {
-  border-left: 1px dashed var(--bg-color-finalizacao);
-  border-right: 1px dashed var(--bg-color-finalizacao);
-  border-bottom: none;
-}
+  .main-cards-status .dropzone.afazer {
+    border-left: 1px dashed var(--bg-color-afazer);
+    border-right: 1px dashed var(--bg-color-afazer);
+    border-bottom: none;
+  }
 
-.inputButton button img{
-  background: none;
-}
+  .main-cards-status .dropzone.execucao {
+    border-left: 1px dashed var(--bg-color-execucao);
+    border-right: 1px dashed var(--bg-color-execucao);
+    border-bottom: none;
+  }
+
+  .main-cards-status .dropzone.revisao {
+    border-left: 1px dashed var(--bg-color-revisao);
+    border-right: 1px dashed var(--bg-color-revisao);
+    border-bottom: none;
+  }
+
+  .main-cards-status .dropzone.finalizacao {
+    border-left: 1px dashed var(--bg-color-finalizacao);
+    border-right: 1px dashed var(--bg-color-finalizacao);
+    border-bottom: none;
+  }
+
+  .inputButton button img {
+    background: none;
+  }
+
+  #test {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
 }

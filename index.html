@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,102 +18,106 @@
   <header>
     <div class="header-top">
       <div class="titulo">
-        <button class="titulo-img-lapis" id="btnedit" ><img src="./img/icons/pencil.png" alt="Editar" width="16px"></button>
-        <h1 id="tituloEdit" >Insira um título </h1>
+        <button class="titulo-img-lapis" id="btnedit"><img src="./img/icons/pencil.png" alt="Editar"
+            width="16px"></button>
+        <h1 id="tituloEdit">Insira um título </h1>
       </div>
 
       <div class="header-options">
+
+        <!-- <div class="header-options-filtrar">
+          <div class="options-filtrar-busca">
+            <input type="text" id="buscarCard" placeholder="Digite seu Título...">
+          </div>
+          <div class="options-filtrar-img">
+            <img src="./img/icons/buscar.png" alt="Buscar" width="16px">
+          </div>
+        </div> -->
 
         <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
           <p>Adicionar</p>
         </button>
 
-        <div id="popup" class="popup">
+        <!-- <div id="popup" class="popup">
           <div class="popup-content">
             <h2>Insira o titulo da sua tarefa</h2>
             <input type="text" id="inputText" placeholder="Insira o título">
-            <button class="header-adicionar"  id="addButton">
+            <button class="header-adicionar" id="addButton">
               <img src="./img/icons/add.png" alt="Adicionar" width="16px">
               <p>Adicionar</p>
             </button>
           </div>
-        </div>
+        </div> -->
 
         <!-- <button class="header-filtrar">
           <img src="./img/icons/filtrar.png" alt="Adicionar" width="16px">
           <p>Filtrar</p>
         </button> -->
 
-        <div class="header-options-filtrar">
-          <div class="options-filtrar-busca">
-           <input type="text" id="buscarCard"  placeholder="Busque por cards, assuntos....">
-          </div>
-          <div class="options-filtrar-img">
-            <img src="./img/icons/buscar.png" alt="Buscar" width="16px"  >
-          </div>
-        </div>
       </div>
   </header>
 
   <main class="main-cards-layout">
     <!-- ********************** CARD DA COLUNA A FAZER ********************** -->
-      <div class="main-cards-status" id="mainCardStatus">
-        <h1 class="main-cards-titulo afazer">A Fazer</h1>
-        <div class="dropzone afazer" id="dropzone">
-          <div class="legend red"></div>
-          <div id="cloneCard">
-            <div class="card afazer" id="afazer" draggable="true">
-              <ul class="status red" id="statusRed">
-                <li class="content afazer" id="contentAfazerId"> 
-                  <!-- <h2 id="changeText" onclick="newText()">Título A fazer</h2> -->
-                   <div id="test" onclick="newText()">Título2</div>
-                  <!-- <p>Prazo xx/xx/xxxx</p> -->
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
-      <div class="main-cards-status">
-        <h1 class="main-cards-titulo execucao">Execução</h1>
-        <div class="dropzone execucao">
-          <div class="legend blue"></div>
-            <div class="card execucao" draggable="true">
-              <ul class="status blue" style="display: none;">
-                <li class="content execucao"></li>
-              </ul>
-            </div>
-        </div>
-      </div>
-    <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
-      <div class="main-cards-status">
-        <h1 class="main-cards-titulo revisao">Revisão</h1>
-        <div class="dropzone revisao">
-          <div class="legend darkblue"></div>
-            <div class="card revisao" draggable="true">
-              <ul class="status darkblue" style="display: none;">
-                <li class="content revisao"></li>
+    <div class="main-cards-status" id="mainCardStatus">
+      <h1 class="main-cards-titulo afazer">A Fazer</h1>
+      <div class="dropzone afazer" id="dropzone">
+        <div class="legend red"></div>
+        <div id="cloneCard">
+          <div class="card afazer" id="afazer" draggable="true">
+            <ul class="status red" id="statusRed">
+              <li class="content afazer" id="contentAfazerId">
+                <!-- <h2 id="changeText" onclick="newText()">Título A fazer</h2> -->
+                <div id="test" onclick="newText()">Digite um Título</div>
+                <!-- <input type="text" id="test" placeholder="Digite um Título" onclick="newText()"> -->
+                <!-- <p>Prazo xx/xx/xxxx</p> -->
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
-      <div class="main-cards-status">
-        <h1 class="main-cards-titulo finalizacao">Finalização</h1>
-        <div class="dropzone finalizacao" >
-          <div class="legend lightblue"></div>
-            <ul class="card finalizacao" draggable="true">
-              <li class="status lightblue" style="display: none;"></li>
+    </div>
+    <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo execucao">Execução</h1>
+      <div class="dropzone execucao">
+        <div class="legend blue"></div>
+        <div class="card execucao" draggable="true">
+          <ul class="status blue" style="display: none;">
+            <li class="content execucao"></li>
           </ul>
-        </div>  
+        </div>
       </div>
+    </div>
+    <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo revisao">Revisão</h1>
+      <div class="dropzone revisao">
+        <div class="legend darkblue"></div>
+        <div class="card revisao" draggable="true">
+          <ul class="status darkblue" style="display: none;">
+            <li class="content revisao"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
+    <div class="main-cards-status">
+      <h1 class="main-cards-titulo finalizacao">Finalização</h1>
+      <div class="dropzone finalizacao">
+        <div class="legend lightblue"></div>
+        <ul class="card finalizacao" draggable="true">
+          <li class="status lightblue" style="display: none;"></li>
+        </ul>
+      </div>
+    </div>
   </main>
 
-<footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
-<script type="module" src="./js/busca.js" defer></script>
-<script type="module" src="./js/dropAndDrag.js" ></script>
-<script type="module" src="./Js/buttons.js" defer></script>
+  <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
+  <script type="module" src="./js/busca.js" defer></script>
+  <script type="module" src="./js/dropAndDrag.js"></script>
+  <script type="module" src="./Js/buttons.js" defer></script>
 </body>
+
 </html>
