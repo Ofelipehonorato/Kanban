@@ -1,99 +1,65 @@
 import { dragstart, drag, dragend, drop } from "./dropAndDrag.js";
 
-// Função que abre um campo para inserir o titulo do card //
-// function openPopup() {
-//   let popup = document.getElementById("popup");
-//   popup.style.display = "block";
-// }
-
-function addText() {
+const elementTwo = document.getElementById("btnAdd");
+elementTwo.addEventListener("click", createNewCard);
+const elementoDiv = document.getElementById("cloneCard")
 
 
-  const cardToClone = cloneCardContainer.querySelector(".card");
+function createNewCard() {
 
-  const cloneCard = cardToClone.cloneNode(true);
+// Cria o elemento <div> com o ID "cloneCard"
+const cloneCardContainer = document.createElement("div");
+cloneCardContainer.id = "cloneCard";
 
-  cloneCardContainer.appendChild(cloneCard);
+// Cria o elemento <div> com as classes "card" e "afazer" e o ID "afazer"
+const cardElement = document.createElement("div");
+cardElement.classList.add("card", "afazer");
+cardElement.id = "afazer";
+cardElement.draggable = true;
 
-  cloneCard.addEventListener("dragstart", dragstart);
-  cloneCard.addEventListener("drag", drag);
-  cloneCard.addEventListener("dragend", dragend);
-  cloneCard.addEventListener("drop", drop);
+// Cria o elemento <ul> com as classes "status" e "red" e o ID "statusRed"
+const ulElement = document.createElement("ul");
+ulElement.classList.add("status", "red");
+ulElement.id = "statusRed";
 
-  console.log('clicou')
+// Cria o elemento <li> com as classes "content" e "afazer" e o ID "contentAfazerId"
+const liElement = document.createElement("li");
+liElement.classList.add("content", "afazer");
+liElement.id = "contentAfazerId";
+
+// Cria o elemento <div> com o ID "textoTitulo" e atribui a função "newText()" ao evento "onclick"
+const divElement = document.createElement("div");
+divElement.id = "textoTitulo";
+divElement.textContent = "Digite um Título";
+divElement.onclick = newText;
+
+// Adiciona o elemento <div> como filho do elemento <li>
+liElement.appendChild(divElement);
+
+// Adiciona o elemento <li> como filho do elemento <ul>
+ulElement.appendChild(liElement);
+
+// Adiciona o elemento <ul> como filho do elemento <div> com o ID "afazer"
+cardElement.appendChild(ulElement);
+
+// Adiciona o elemento <div> com o ID "afazer" como filho do elemento <div> com o ID "cloneCard"
+cloneCardContainer.appendChild(cardElement);
+
+// Adiciona o elemento <div> com o ID "cloneCard" ao documento (DOM)
+elementoDiv.appendChild(cloneCardContainer);
+console.log('click')
 }
 
-const elementTwo = document.getElementById("btnAdd");
-elementTwo.addEventListener("click", addText);
 
-// const btnAdd = document.querySelector("#btnAdd");
-const cloneCardContainer = document.querySelector("#cloneCard");
-
-
-// Função para adicionar um novo card //
-// function addText() {
-//   let inputText = document.getElementById("inputText").value;
-
-//   if (inputText) {
-//     const cardToClone = cloneCardContainer.querySelector(".card");
-
-//     if (cardToClone) {
-//       const cloneCard = cardToClone.cloneNode(true);
-//       const titleElement = cloneCard.querySelector("h2");
-//       titleElement.textContent = inputText;
-//       cloneCardContainer.appendChild(cloneCard);
-
-//       cloneCard.addEventListener("dragstart", dragstart);
-//       cloneCard.addEventListener("drag", drag);
-//       cloneCard.addEventListener("dragend", dragend);
-//       cloneCard.addEventListener("drop", drop);
-//     }
-//   }
-
-//   let popup = document.getElementById("popup");
-//   popup.style.display = "none";
-
-//   document.getElementById("inputText").value = "";
-// }
-
-// const btnAdd = document.querySelector("#btnAdd");
-// const cloneCardContainer = document.querySelector("#cloneCard");
-
-// btnAdd.addEventListener("click", openPopup);
-// document.addEventListener("DOMContentLoaded", function () {
-//   let addButton = document.getElementById("addButton");
-//   addButton.addEventListener("click", addText);
-// });
-
-// btnAdd.addEventListener("click", openPopup);
-// document.addEventListener("DOMContentLoaded", function () {
-//   let addButton = document.getElementById("addButton");
-//   addButton.addEventListener("click", addText);
-// });
-// Função que insere o nome no titulo do kanban //
-
-// let btnedit = document.getElementById("btnedit")
-// btnedit.addEventListener("click", editarNome)
-
-// function editarNome() {
-//   let titulo = document.getElementById("tituloEdit")
-//   let novoTitulo = prompt("Insira o nome do seu kanban")
-
-//   if (novoTitulo && novoTitulo.trim() !== '') {
-//     titulo.innerHTML = novoTitulo
-//   } else {
-//     alert("O titulo não pode ficar vazio!!")
-//   }
-// }
 //Mudando texto card
 function newText() {
-  const changeText = document.getElementById("test")
+  const changeText = document.getElementById("textoTitulo")
   const novoTitulo = prompt('Informe o novo Título')
   changeText.innerHTML = novoTitulo;
   console.log('Clicou');
 }
 
-const element = document.getElementById("test");
+const element = document.getElementById("textoTitulo");
 element.addEventListener("click", newText);
 
 
