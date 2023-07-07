@@ -33,7 +33,7 @@ liElement.id = "contentAfazerId";
 const divElement = document.createElement("div");
 divElement.id = "textoTitulo";
 divElement.textContent = "Digite um Título";
-divElement.onclick = newText;
+// divElement.onclick = newText;
 
 // Adiciona o elemento <div> como filho do elemento <li>
 liElement.appendChild(divElement);
