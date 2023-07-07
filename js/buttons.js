@@ -3,13 +3,15 @@ import { dragstart, drag, dragend, drop } from "./dropAndDrag.js";
 const elementTwo = document.getElementById("btnAdd");
 elementTwo.addEventListener("click", createNewCard);
 const elementoDiv = document.getElementById("cloneCard")
+const cloneCardContainer = document.getElementById("cloneCard")
 
 
 function createNewCard() {
 
 // Cria o elemento <div> com o ID "cloneCard"
-const cloneCardContainer = document.createElement("div");
-cloneCardContainer.id = "cloneCard";
+// const cloneCardContainer = document.createElement("div");
+// cloneCardContainer.id = "cloneCard";
+// cloneCardContainer.draggable = true;
 
 // Cria o elemento <div> com as classes "card" e "afazer" e o ID "afazer"
 const cardElement = document.createElement("div");
@@ -46,7 +48,7 @@ cardElement.appendChild(ulElement);
 cloneCardContainer.appendChild(cardElement);
 
 // Adiciona o elemento <div> com o ID "cloneCard" ao documento (DOM)
-elementoDiv.appendChild(cloneCardContainer);
+// elementoDiv.appendChild(cloneCardContainer);
 console.log('click')
 }
 
