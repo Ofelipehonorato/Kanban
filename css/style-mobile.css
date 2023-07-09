@@ -15,8 +15,9 @@
 
 body {
   background-image: url("../img/background/background-img.jpg");
-  background-size: auto;
   background-repeat: no-repeat;  
+  background-position: center;
+  background-size: cover;
 }
 /************************* Ínicio CSS do Header *******************************/
 header{
@@ -193,10 +194,6 @@ header{
   display: inline-block;
 }
 
-.content h2 {
-  font-weight: var(--font-weight-regular);
-  font-size: 18px;
-}
 
 .content p {
   font-weight: var(--font-weight-ligth);
