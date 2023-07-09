@@ -24,23 +24,14 @@
       </div>
 
       <div class="header-options">
-
-        <!-- <div class="header-options-filtrar">
-          <div class="options-filtrar-busca">
-            <input type="text" id="buscarCard" placeholder="Digite seu Título...">
-          </div>
-          <div class="options-filtrar-img">
-            <img src="./img/icons/buscar.png" alt="Buscar" width="16px">
-          </div>
-        </div> -->
-
         <button class="header-adicionar" id="btnAdd" type="button">
           <img src="./img/icons/add.png" alt="Adicionar" width="16px">
           <p>Adicionar</p>
         </button>
 
-        <!-- <div id="popup" class="popup">
+        <div id="popup" class="popup">
           <div class="popup-content">
+            <span class="popup-close" id="closePopup">&times;</span>
             <h2>Insira o titulo da sua tarefa</h2>
             <input type="text" id="inputText" placeholder="Insira o título">
             <button class="header-adicionar" id="addButton">
@@ -48,13 +39,7 @@
               <p>Adicionar</p>
             </button>
           </div>
-        </div> -->
-
-        <!-- <button class="header-filtrar">
-          <img src="./img/icons/filtrar.png" alt="Adicionar" width="16px">
-          <p>Filtrar</p>
-        </button> -->
-
+        </div>
       </div>
   </header>
 
@@ -66,13 +51,7 @@
         <div class="legend red" id="Father"></div>
         <div id="cloneCard">
           <div class="card afazer" id="afazer" draggable="true">
-            <ul class="status red" id="statusRed">
-              <li class="content afazer" id="contentAfazerId">
-                <div id="textoTitulo">
-                  Digite um Título
-                </div>
-              </li>
-            </ul>
+
           </div>
         </div>
 
@@ -116,8 +95,7 @@
 
   <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
   <script type="module" src="./js/dropAndDrag.js"></script>
-  <!-- <script type="module" src="./Js/buttons.js" defer></script> -->
-  <script type="module" src="./Js/arrayCards.js" defer></script>
+  <script type="module" src="./Js/addCard.js" defer></script>
   <script type="module" src="./Js/editTitulo.js" defer></script>
 </body>
 
