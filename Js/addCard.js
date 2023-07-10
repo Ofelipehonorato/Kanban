@@ -22,8 +22,10 @@ btnClosePopUp.addEventListener("click", closePopup);
 const btnAdd = document.getElementById("addButton");
 btnAdd.addEventListener("click", criarCard);
 
+let cardsArray = [];
 function criarCard() {
-  let cardsArray = [];
+
+  console.log(cardsArray)
 
   let popup = document.getElementById("popup");
   popup.style.display = "none";
@@ -50,7 +52,7 @@ function criarCard() {
   liCard.id = "contentAfazerId";
   ulCard.appendChild(liCard);
 
-  const cardElementText = document.createElement("div");
+  const cardElementText = document.createElement("p");
   cardElementText.id = "textoTitulo";
   cardElementText.innerHTML = value;
 
@@ -61,7 +63,6 @@ function criarCard() {
   let kanbanContainer = document.getElementById("dropzone");
   kanbanContainer.appendChild(cardElement);
 
-
   cardElement.addEventListener("dragstart", dragstart);
   cardElement.addEventListener("drag", drag);
   cardElement.addEventListener("dragend", dragend);
@@ -71,10 +72,13 @@ function criarCard() {
   deleteButton.classList.add("btnDelete");
   deleteButton.innerText = "Apagar";
   liCard.appendChild(deleteButton);
-  
+
   // Adicionar evento de exclusão ao botão
   deleteButton.addEventListener("click", function() {
     alert("Tarefa removida!!")
     cardElement.remove();
   });
+
+
 }
+
