@@ -17,7 +17,7 @@ body {
   background-image: url("../img/background/background-img.jpg");
   background-repeat: no-repeat;  
   background-position: center;
-  background-size: cover;
+  background-size: auto;
 }
 /************************* Ínicio CSS do Header *******************************/
 header{
@@ -28,14 +28,13 @@ header{
 .header-top{
   display: flex;
   flex-direction: column;
-  width: 390px;
+  align-items: center;
 }
 
 .header-top .titulo{
   display: flex;
   justify-content: left;
   align-items: center;
-  margin-left: 28px;
 }
 
 .titulo h1 {
@@ -55,66 +54,73 @@ header{
   align-items: center;
 }
 
-.header-options button p {
-  display: none;
-}
-
 .header-adicionar{
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--btn-add-color);
-  width: 44px;
+  width: auto;
+  padding: 5px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-/* .header-filtrar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--btn-filtro-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-} */
 
-.header-options input{
-  width: 186px;
-  height: 40px;
-  border-radius: 8px 0 0 8px;
+.header-options button p {
+  display: inline-block;
+  font-weight: var(--font-weight-regular);
+  font-size: 16px;
+  color: white;
   padding-left: 8px;
-  box-shadow: 0 0 0 0 ;
-  outline: 0;
 }
 
-.header-options-filtrar{
-  display: flex;
+.popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
 }
 
-.options-filtrar-img {
+.popup-content {
   display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 5px;
   align-items: center;
-  border-radius: 0 8px 8px 0;
-  background-color: white;
-  height: 40px;
-  width: 25px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 16px;
+  color: #aaa;
   cursor: pointer;
 }
 
-.options-filtrar-img img{
-  opacity: 0.5;
+#inputText {
+  width: 212px;
+  height: 30px;
+  padding-left: 8px;
+  margin: 0 0 16px 20px;
 }
 
-/* .header-options #buscarCard{
-  background-image: url("../img/icons/buscar.png");
-  background-size: 16px;
-  background-repeat: no-repeat;
-  background-position: 4% 50%;
-  cursor: pointer;
-} */
+.popup-content h2 {
+  text-align: center;
+  font-weight: var(--font-weight-regular);
+  margin-bottom: 12px;
+}
 
 /**************************** Fim CSS do Header *******************************/
 
@@ -143,6 +149,9 @@ header{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 2px;
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-cards-status .main-cards-titulo.execucao{
@@ -190,16 +199,6 @@ header{
   min-height: 120px;
 } 
 
-.card{
-  display: inline-block;
-}
-
-
-.content p {
-  font-weight: var(--font-weight-ligth);
-  font-size: 12px;
-}
-
 .content button{
   color: white;
   width: 40px;
@@ -209,21 +208,16 @@ header{
   cursor: pointer;
 }
 
-.btn {
-  background: transparent;
-  cursor: pointer;  
-}
-
-.content.afazer button{
+.afazer button{
   background-color: var(--bg-color-afazer);
 }
-.content.execucao button{
+.execucao button{
   background-color: var(--bg-color-execucao);
 }
-.content.revisao button{
+.revisao button{
   background-color: var(--bg-color-revisao);
 }
-.content.finalizacao button{
+.finalizacao button{
   background-color: var(--bg-color-finalizacao);
 }
 
@@ -242,8 +236,6 @@ header{
   margin: 0 26px 15px 0;
   padding: 4px;
   width: 225px;
-  display: grid;
-  grid-template-columns: 190px 30px ;
 }
 
 .status.red {
@@ -287,6 +279,10 @@ header{
   background-color: rgba(119, 171, 189, 0.01);
 }
 
+#textoTitulo{
+  white-space: normal
+}
+
 .highlight {
   background-color: #00000017;
 }
@@ -307,6 +303,9 @@ header{
 /****************************  FIM DO CSS DO CARDS ****************************/
 
 footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   color: white;
   text-align: center;
   background-color: #1D3557;
