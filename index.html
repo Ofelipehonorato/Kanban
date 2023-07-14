@@ -32,7 +32,7 @@
             <span class="popup-close" id="closePopup">&times;</span>
             <h2>Insira o titulo da sua tarefa</h2>
             <input type="text" id="inputText" placeholder="Insira o título">
-            <button class="header-adicionar" id="addButton">
+            <button type="submit" class="header-adicionar" id="addButton">
               <img src="./img/icons/add.png" alt="Adicionar" width="16px">
               <p>Adicionar</p>
             </button>
@@ -48,7 +48,7 @@
       <div class="dropzone afazer" id="dropzone">
         <div class="legend red" id="Father"></div>
           <div class="card afazer" id="afazer" draggable="true">
-
+            <p id="textoTitulo"></p>
 
           </div>
       </div>
@@ -58,7 +58,7 @@
       <h1 class="main-cards-titulo execucao">Execução</h1>
       <div class="dropzone execucao">
         <div class="legend blue"></div>
-        <div class="card execucao" draggable="true">
+        <div class="card execucao" id="execucao" draggable="true">
        
         </div>
       </div>
@@ -68,7 +68,7 @@
       <h1 class="main-cards-titulo revisao">Revisão</h1>
       <div class="dropzone revisao">
         <div class="legend darkblue"></div>
-        <div class="card revisao" draggable="true">
+        <div class="card revisao" id="revisao"  draggable="true">
 
         </div>
       </div>
@@ -78,7 +78,7 @@
       <h1 class="main-cards-titulo finalizacao">Finalização</h1>
       <div class="dropzone finalizacao">
         <div class="legend lightblue"></div>
-        <div class="card revisao" draggable="true">
+        <div class="card finalizacao" id="finalizacao"  draggable="true">
 
       </div>
     </div>
@@ -86,6 +86,7 @@
 
   <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
   <script type="module" src="./js/dropAndDrag.js"></script>
+  <!-- <script type="module" src="./js/testes.js"></script> -->
   <script type="module" src="./Js/addCard.js" defer></script>
   <script type="module" src="./Js/editTitulo.js" defer></script>
 </body>
