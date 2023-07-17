@@ -43,10 +43,10 @@
 
   <main class="main-cards-layout">
     <!-- ********************** CARD DA COLUNA A FAZER ********************** -->
-    <div class="main-cards-status" id="mainCardStatus">
+    <div class="main-cards-status" id="red">
       <h1 class="main-cards-titulo afazer">A Fazer</h1>
       <div class="dropzone afazer" id="dropzone">
-        <div class="legend red" id="Father"></div>
+        <div class="legend red"></div>
           <div class="card afazer" id="afazer" draggable="true">
             <p id="textoTitulo"></p>
 
@@ -54,9 +54,9 @@
       </div>
     </div>
     <!-- ********************** CARD DA COLUNA EXECUÇÃO ********************** -->
-    <div class="main-cards-status">
+    <div class="main-cards-status" id="blue">
       <h1 class="main-cards-titulo execucao">Execução</h1>
-      <div class="dropzone execucao">
+      <div class="dropzone execucao" id="dropzone">
         <div class="legend blue"></div>
         <div class="card execucao" id="execucao" draggable="true">
        
@@ -64,9 +64,9 @@
       </div>
     </div>
     <!-- ********************** CARD DA COLUNA REVISÃO ********************** -->
-    <div class="main-cards-status">
+    <div class="main-cards-status" id="darkblue">
       <h1 class="main-cards-titulo revisao">Revisão</h1>
-      <div class="dropzone revisao">
+      <div class="dropzone revisao" id="dropzone">
         <div class="legend darkblue"></div>
         <div class="card revisao" id="revisao"  draggable="true">
 
@@ -74,9 +74,9 @@
       </div>
     </div>
     <!-- ********************** CARD DA COLUNA FINALIZADO ********************** -->
-    <div class="main-cards-status">
+    <div class="main-cards-status" id="lightblue">
       <h1 class="main-cards-titulo finalizacao">Finalização</h1>
-      <div class="dropzone finalizacao">
+      <div class="dropzone finalizacao" id="dropzone">
         <div class="legend lightblue"></div>
         <div class="card finalizacao" id="finalizacao"  draggable="true">
 
@@ -86,7 +86,6 @@
 
   <footer>Desenvolvido por Pedro Tessarolo e Felipe Honorato</footer>
   <script type="module" src="./js/dropAndDrag.js"></script>
-  <!-- <script type="module" src="./js/testes.js"></script> -->
   <script type="module" src="./Js/addCard.js" defer></script>
   <script type="module" src="./Js/editTitulo.js" defer></script>
 </body>
